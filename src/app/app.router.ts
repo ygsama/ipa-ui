@@ -19,7 +19,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: './home/groups.module#HomeModule'
+    loadChildren: './home/home.module#HomeModule'
   }
   ,{
     /*匹配不到路由的时候加载的组件*/

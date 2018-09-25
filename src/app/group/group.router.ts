@@ -17,18 +17,6 @@ export const groupRoutes = [
     //   {path: '**', component:GroupComponent}
     // ]
   }
-  // {
-  //   path: 'groups',
-  //   loadChildren: './home/home.modele#GroupsModule'
-  // },
-  // {
-  //   path: 'group',
-  //   loadChildren: './home/group.modele#GroupModule'
-  // },
-  // {
-  //   path: 'home',
-  //   loadChildren: './home/groups.modele#HomeModule'
-  // }
 ];
 
 @NgModule({

@@ -13,13 +13,14 @@ import { HomeComponent } from './home/home.component';
 import { GroupsComponent } from './groups/groups.component';
 import { GroupComponent } from './group/group.component';
 import {GroupRouter} from './group/group.router';
+import {HomeModule} from './home/home.module';
 
 registerLocaleData(zh);
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    // HomeComponent,
     GroupsComponent,
     GroupComponent
   ],

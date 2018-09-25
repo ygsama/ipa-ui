@@ -5,12 +5,12 @@ import {HomeComponent} from './home.component';
 import {GroupComponent} from '../group/group.component';
 import {GroupsComponent} from '../groups/groups.component';
 
-const routes: Routes = [
-  // {
-  //   path: 'groups',
-  //   component: GroupsComponent,
-  //   // children:[]   /*配置子路由*/
-  // },
+export  const homeRoutes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+    // children:[]   /*配置子路由*/
+  },
   // {
   //   path: 'group',
   //   component: GroupComponent
@@ -25,10 +25,3 @@ const routes: Routes = [
   //   redirectTo: 'group'
   // }
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule {
-}
