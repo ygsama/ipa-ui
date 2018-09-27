@@ -1,20 +1,16 @@
-import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './home.component';
+import {JsonComponent} from './json.component';
 
-import {GroupComponent} from '../group/group.component';
-import {GroupsComponent} from '../groups/groups.component';
-
-export  const homeRoutes: Routes = [
+export const homeRoutes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    // children:[]   /*配置子路由*/
   },
-  // {
-  //   path: 'group',
-  //   component: GroupComponent
-  // },
+  {
+    path: ':id',
+    component: JsonComponent
+  },
   // {
   //   path: 'home',
   //   component: HomeComponent

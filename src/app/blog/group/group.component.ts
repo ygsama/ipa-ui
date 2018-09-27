@@ -3,7 +3,7 @@ import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 @Component({
   selector: 'app-group',
   templateUrl: './group.component.html',
-  styleUrls: ['./group.component.css']
+  styleUrls: []
 })
 export class GroupComponent implements OnInit {
 

@@ -1,0 +1,9 @@
+<div>
+  <input nz-input  [(ngModel)]="key">
+  <textarea nz-input [(ngModel)]="inputValue" [nzAutosize]="{ minRows: 5, maxRows: 30 }"></textarea>
+</div>
+<button nz-button nzType="primary" nzSize="large" (click)="setURL()" >Submit</button>
+
+<div>
+  <p>{{urlstr}}</p>
+</div>

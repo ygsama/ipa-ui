@@ -3,7 +3,6 @@ import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from '../home/home.component';
 
 import {GroupComponent} from './group.component';
-import {GroupsComponent} from '../groups/groups.component';
 
 var AuthGuard;
 export const groupRoutes = [
@@ -18,10 +17,3 @@ export const groupRoutes = [
     // ]
   }
 ];
-
-@NgModule({
-  imports: [RouterModule.forChild(groupRoutes)],
-  exports: [RouterModule]
-})
-export class GroupRouter {
-}

@@ -1,31 +1,25 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {GroupsComponent} from './groups/groups.component';
-import {GroupComponent} from './group/group.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'group',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
-    path: 'groups',
-    component: GroupsComponent
-  },
-  {
     path: 'group',
-    component: GroupComponent
+    loadChildren: './blog/group/group.module#GroupModule'
   },
   {
     path: 'home',
-    loadChildren: './home/home.module#HomeModule'
+    loadChildren: './blog/home/home.module#HomeModule'
   }
-  ,{
+  // ,{
     /*匹配不到路由的时候加载的组件*/
-    path: '**', /*任意的路由*/
-    component: GroupComponent
-  }
+    // path: '**', /*任意的路由*/
+    // component: GroupComponent
+  // }
 ];
 
 @NgModule({

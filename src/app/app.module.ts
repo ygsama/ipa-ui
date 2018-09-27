@@ -4,16 +4,13 @@ import { AppRouter } from './app.router';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
-import { HomeComponent } from './home/home.component';
-import { GroupsComponent } from './groups/groups.component';
-import { GroupComponent } from './group/group.component';
-import {GroupRouter} from './group/group.router';
-import {HomeModule} from './home/home.module';
+import {SharedModule} from './blog/shared.module';
+
 
 registerLocaleData(zh);
 
@@ -21,16 +18,14 @@ registerLocaleData(zh);
   declarations: [
     AppComponent,
     // HomeComponent,
-    GroupsComponent,
-    GroupComponent
+    // GroupComponent
   ],
   imports: [
     BrowserModule,
     AppRouter,
     BrowserAnimationsModule,
-    FormsModule,
     HttpClientModule,
-    NgZorroAntdModule
+    SharedModule
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
