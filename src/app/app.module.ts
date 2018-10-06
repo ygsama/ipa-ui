@@ -11,14 +11,11 @@ import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import {SharedModule} from './blog/shared.module';
 
-
 registerLocaleData(zh);
 
 @NgModule({
   declarations: [
     AppComponent,
-    // HomeComponent,
-    // GroupComponent
   ],
   imports: [
     BrowserModule,

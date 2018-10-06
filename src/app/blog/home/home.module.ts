@@ -5,10 +5,10 @@ import {RouterModule} from '@angular/router';
 import {HomeComponent} from './home.component';
 import {SharedModule} from '../shared.module';
 import {HomeService} from './home.service';
-import {JsonComponent} from './json.component';
+
 
 const modules=[SharedModule];
-const comp=[HomeComponent,JsonComponent];
+const comp=[HomeComponent];
 
 
 @NgModule({

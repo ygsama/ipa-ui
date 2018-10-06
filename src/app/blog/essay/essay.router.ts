@@ -1,15 +1,14 @@
 import {Routes, RouterModule} from '@angular/router';
-import {HomeComponent} from './home.component';
+import {EssayComponent} from './essay.component';
 
-export const homeRoutes: Routes = [
+
+
+export const essayRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent,
-  }
-  // {
-  //   path: 'home',
-  //   component: HomeComponent
-  // }
+    component: EssayComponent,
+  },
+
   // , {
   //   /*匹配不到路由的时候加载的组件*/
   //   path: '**', /*任意的路由*/

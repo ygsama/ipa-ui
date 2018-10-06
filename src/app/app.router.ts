@@ -8,12 +8,16 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'group',
-    loadChildren: './blog/group/group.module#GroupModule'
+    path: 'plan',
+    loadChildren: './blog/plan/plan.module#PlanModule'
   },
   {
     path: 'home',
     loadChildren: './blog/home/home.module#HomeModule'
+  },
+  {
+    path: 'essay',
+    loadChildren: './blog/essay/essay.module#EssayModule'
   }
   // ,{
     /*匹配不到路由的时候加载的组件*/

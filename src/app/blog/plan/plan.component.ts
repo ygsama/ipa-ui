@@ -1,11 +1,11 @@
 import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 
 @Component({
-  selector: 'app-group',
-  templateUrl: './group.component.html',
+  selector: 'app-plan',
+  templateUrl: './plan.component.html',
   styleUrls: []
 })
-export class GroupComponent implements OnInit {
+export class PlanComponent implements OnInit {
 
   title = 'app';
 

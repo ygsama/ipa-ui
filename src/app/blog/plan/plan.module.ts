@@ -1,18 +1,18 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {groupRoutes} from './group.router';
-import {GroupComponent} from './group.component';
+import {planRoutes} from './plan.router';
+import {PlanComponent} from './plan.component';
 import {RouterModule} from '@angular/router';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 @NgModule({
-  declarations: [GroupComponent],
+  declarations: [PlanComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(groupRoutes),
+    RouterModule.forChild(planRoutes),
     NgZorroAntdModule
   ],
   exports: [CommonModule]
 })
-export class GroupModule {
+export class PlanModule {
 }
