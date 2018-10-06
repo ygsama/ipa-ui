@@ -9,15 +9,19 @@ const routes: Routes = [
   },
   {
     path: 'plan',
-    loadChildren: './blog/plan/plan.module#PlanModule'
+    loadChildren: './layout/plan/plan.module#IpaModule'
   },
   {
     path: 'home',
-    loadChildren: './blog/home/home.module#HomeModule'
+    loadChildren: './layout/home/home.module#HomeModule'
   },
   {
     path: 'essay',
-    loadChildren: './blog/essay/essay.module#EssayModule'
+    loadChildren: './layout/essay/essay.module#EssayModule'
+  },
+  {
+    path: 'ipa',
+    loadChildren: './layout/ipa/ipa.module#IpaModule'
   }
   // ,{
     /*匹配不到路由的时候加载的组件*/
