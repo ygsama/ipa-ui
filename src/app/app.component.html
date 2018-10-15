@@ -1,1 +1,16 @@
-<router-outlet></router-outlet>
+<div style="height:auto;min-height:100%;background-color:#F0F2F5;">
+  <div style="margin: 0 auto; width: 1080px;background-color: white;line-height: 44px;">
+    <div nz-row style="text-align: center;font-family:'Arial','Microsoft YaHei','黑体','宋体',sans-serif;" >
+      <div nz-col [nzSpan]="2"><img src="./assets/img/logo.png"></div>
+      <div nz-col [nzSpan]="2"><button nz-button routerLink="./home" style="border:0;">首页</button></div>
+      <div nz-col [nzSpan]="2"><button nz-button routerLink="./plan" style="border:0;">计划</button></div>
+      <div nz-col [nzSpan]="2"><button nz-button routerLink="./essay" style="border:0;">随笔</button></div>
+      <div nz-col [nzSpan]="2"><button nz-button routerLink="./ipa" style="border:0;">IPA</button></div>
+      <div nz-col [nzSpan]="8"></div>
+      <div nz-col [nzSpan]="2"><button nz-button  style="border:0;">登录</button></div>
+      <div nz-col [nzSpan]="2"><button nz-button  style="border:0;">个人中心</button></div>
+      <div nz-col [nzSpan]="2"><nz-avatar nzIcon="anticon anticon-user" nzSrc="//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar></div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

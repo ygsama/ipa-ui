@@ -3,7 +3,6 @@ import {Routes, RouterModule} from '@angular/router';
 
 import {PlanComponent} from './plan.component';
 
-var AuthGuard;
 export const planRoutes = [
   {
     path: '',

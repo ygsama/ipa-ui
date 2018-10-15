@@ -1,75 +1,54 @@
-<div style="height:auto;min-height:100%;background-color:#F0F2F5;">
-
-  <div style="margin: 0 auto; width: 1080px;background-color: white;line-height: 44px;">
-    <div nz-row style="text-align: center;font-family:'Arial','Microsoft YaHei','黑体','宋体',sans-serif;" >
-      <div nz-col [nzSpan]="2"><img src="./assets/img/logo.png"></div>
-      <div nz-col [nzSpan]="2"><button nz-button  style="border:0;">首页</button></div>
-      <div nz-col [nzSpan]="2"><button nz-button  style="border:0;">目标&计划 </button></div>
-      <div nz-col [nzSpan]="2"><button nz-button  style="border:0;">随笔</button></div>
-      <div nz-col [nzSpan]="2"><button nz-button  style="border:0;">IPA</button></div>
-      <div nz-col [nzSpan]="8"></div>
-      <div nz-col [nzSpan]="2"><button nz-button  style="border:0;">登录</button></div>
-      <div nz-col [nzSpan]="2"><button nz-button  style="border:0;">个人中心</button></div>
-      <div nz-col [nzSpan]="2"><nz-avatar nzIcon="anticon anticon-user" nzSrc="//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar></div>
-    </div>
+<div style="min-height: 700px;margin: 8px auto; width: 1080px;background-color: #F0F2F5;">
+  <div style="margin: 4px auto;width: 176px;background-color: white;float: left">
+    <ul nz-menu [nzMode]="'inline'" style="">
+      <li nz-menu-item>
+        <span title><i class="anticon anticon-mail"></i>新建标签</span>
+      </li>
+      <li nz-menu-item>
+        <span title><i class="anticon anticon-appstore"></i> 日记</span>
+      </li>
+      <li nz-menu-item>
+        <span title><i class="anticon anticon-setting"></i> 随笔</span>
+      </li>
+    </ul>
   </div>
 
-  <div style="min-height: 700px;margin: 8px auto; width: 1080px;background-color: #F0F2F5;">
-    <div style="margin: 4px auto;width: 176px;background-color: white;float: left">
-      <ul nz-menu [nzMode]="'inline'" style="">
-        <li nz-menu-item>
-          <span title><i class="anticon anticon-mail"></i>新建标签</span>
-        </li>
-        <li nz-menu-item>
-          <span title><i class="anticon anticon-appstore"></i> 日记</span>
-        </li>
-        <li nz-menu-item>
-          <span title><i class="anticon anticon-setting"></i> 随笔</span>
-        </li>
-      </ul>
+  <div style="margin: 4px auto;width: 896px;background-color: white;float: right">
+    <div>
+      <div style="display: inline-block;font-size: 20px;color: #6d757a;padding-left: 32px;padding-top: 8px" nz-row>
+        <span>随笔</span>
+      </div>
+      <div style="padding-top: 4px;" nz-row>
+        <div nz-col [nzSpan]="2" [nzOffset]="14"><button nz-button >新建</button></div>
+        <div nz-col [nzSpan]="2"><button nz-button >新建</button></div>
+        <div nz-col [nzSpan]="6" style="padding-right: 8px">
+          <nz-input-group nzSuffixIcon="anticon anticon-search">
+            <input type="text" nz-input placeholder="input search text">
+          </nz-input-group>
+        </div>
+      </div>
     </div>
 
-    <div style="margin: 4px auto;width: 896px;background-color: white;float: right">
-
-      <div>
-        <div style="display: inline-block;font-size: 20px;color: #6d757a;padding-left: 32px;padding-top: 8px" nz-row>
-          <span>随笔</span>
+    <div style="margin: 24px;clear: both">
+      <div style="border-bottom:1px dotted #ddd;padding: 8px;" *ngFor="let item of data">
+        <div>
+          <a style="font-size: 18px;color: #4f4f4f;word-wrap: break-word;word-break: break-all;"
+              [routerLink]="['/post/postdetail',item.id]">{{item.title}}</a>
         </div>
-        <div style="padding-top: 4px;" nz-row>
-          <div nz-col [nzSpan]="2" [nzOffset]="14"><button nz-button >新建</button></div>
-          <div nz-col [nzSpan]="2"><button nz-button >新建</button></div>
-          <div nz-col [nzSpan]="6" style="padding-right: 8px">
-            <nz-input-group nzSuffixIcon="anticon anticon-search">
-              <input type="text" nz-input placeholder="input search text">
-            </nz-input-group>
-          </div>
+        <div nz-row style="text-align: center">
+          <div nz-col [nzSpan]="6" style="text-align: left"><i class="anticon anticon-form"></i> {{item.time}}</div>
+          <div nz-col [nzSpan]="3" style="text-align: left"><i class="anticon anticon-eye"></i> {{item.id}}</div>
+          <div nz-col [nzSpan]="9"></div>
+          <div nz-col [nzSpan]="2">查看</div>
+          <div nz-col [nzSpan]="2">禁止评论</div>
+          <div nz-col [nzSpan]="2">删除</div>
         </div>
       </div>
 
-      <div style="margin: 24px;clear: both">
-        <div style="border-bottom:1px dotted #ddd;padding: 8px;" *ngFor="let item of data">
-          <div>
-            <a style="font-size: 18px;color: #4f4f4f;word-wrap: break-word;word-break: break-all;"
-                [routerLink]="['/post/postdetail',item.id]">{{item.title}}</a>
-          </div>
-          <div nz-row style="text-align: center">
-            <div nz-col [nzSpan]="6" style="text-align: left"><i class="anticon anticon-form"></i> {{item.time}}</div>
-            <div nz-col [nzSpan]="3" style="text-align: left"><i class="anticon anticon-eye"></i> {{item.id}}</div>
-            <div nz-col [nzSpan]="9"></div>
-            <div nz-col [nzSpan]="2">查看</div>
-            <div nz-col [nzSpan]="2">禁止评论</div>
-            <div nz-col [nzSpan]="2">删除</div>
-          </div>
-        </div>
-
-        <div style="text-align: center;padding: 8px">
-          <nz-pagination [nzPageIndex]="1" [nzTotal]="50" ></nz-pagination>
-        </div>
+      <div style="text-align: center;padding: 8px">
+        <nz-pagination [nzPageIndex]="1" [nzTotal]="50" ></nz-pagination>
       </div>
-
-
     </div>
-
 
   </div>
 

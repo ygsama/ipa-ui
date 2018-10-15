@@ -1,89 +1,55 @@
-<nz-layout>
-  <!--侧边栏-->
-  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate">
-    <div class="logo">
-    </div>
-    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
-      <li nz-submenu>
-        <span title><i class="anticon anticon-folder"></i><span class="nav-text">大屏</span></span>
-        <ul>
-          <li nz-menu-item><i class="anticon anticon-layout"></i>紫金大屏</li>
-          <li nz-menu-item><i class="anticon anticon-layout"></i>大屏1</li>
-          <li nz-menu-item><i class="anticon anticon-layout"></i>大屏2</li>
-        </ul>
+<div style="min-height: 700px;margin: 8px auto; width: 1080px;background-color: #F0F2F5;">
+  <div style="margin: 4px auto;width: 176px;background-color: white;float: left">
+    <ul nz-menu [nzMode]="'inline'" style="">
+      <li nz-menu-item>
+        <span title><i class="anticon anticon-mail"></i>新建标签</span>
       </li>
-      <li nz-submenu>
-        <span title><i class="anticon anticon-appstore"></i><span class="nav-text">报表</span></span>
-        <ul>
-          <li nz-menu-item><i class="anticon anticon-appstore-o"></i>月度统计报表</li>
-          <li nz-menu-item><i class="anticon anticon-appstore-o"></i>年均统计报表</li>
-        </ul>
+      <li nz-menu-item>
+        <span title><i class="anticon anticon-appstore"></i> 日记</span>
       </li>
-      <li nz-menu-group>
-        <span title><span class="nav-text">管理中心</span></span>
-        <ul>
-          <li nz-menu-item><i class="anticon anticon-appstore"></i>报表管理</li>
-          <li nz-menu-item><i class="anticon anticon-area-chart"></i>大屏管理</li>
-          <li nz-menu-item><i class="anticon anticon-idcard"></i>角色管理</li>
-          <li nz-menu-item><i class="anticon anticon-team"></i>用户管理</li>
-          <li nz-menu-item><i class="anticon anticon-table"></i>数据表预览</li>
-          <li nz-menu-item><i class="anticon anticon-cloud"></i>数据源管理</li>
-          <li nz-menu-item><i class="anticon anticon-tool"></i>空间设置</li>
-        </ul>
+      <li nz-menu-item>
+        <span title><i class="anticon anticon-setting"></i> 随笔</span>
       </li>
     </ul>
-  </nz-sider>
+  </div>
 
-  <nz-layout>
-    <!--头部区域-->
-    <nz-header style="background: #fff; padding:0;" >
-      <div nz-row nzType="flex" nzJustify="end">
-        <span nz-col nzSpan="1">
-          <i class="anticon trigger" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed" (click)="isCollapsed=!isCollapsed"></i>
-        </span>
-        <span nz-col nzSpan="1">空间通道</span>
-        <span nz-col nzSpan="1">
-          <nz-dropdown>
-            <a nz-dropdown>新建</a>
-            <ul nz-menu nzSelectable>
-              <li nz-menu-item><a>报表文件夹</a></li>
-              <li nz-menu-item><a>报表页面</a></li>
-              <li nz-menu-item><a>iframe页面</a></li>
-              <li nz-menu-divider></li>
-              <li nz-menu-item><a>数据大屏</a></li>
-            </ul>
-          </nz-dropdown>
-        </span>
-        <span nz-col nzSpan="18"></span>
-        <span nz-col nzSpan="1"><a routerLink="/groups">空间广场</a></span>
-        <span nz-col nzSpan="1"><a routerLink="/home">个人空间</a></span>
-        <span nz-col nzSpan="1">
-          <nz-dropdown><a nz-dropdown><nz-avatar nzIcon="anticon anticon-user" nzSrc="//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar></a>
-          <ul nz-menu nzSelectable>
-            <li nz-menu-item><a routerLink="/home">个人中心</a></li>
-            <li nz-menu-item><a>空间广场</a></li>
-            <li nz-menu-item><a>首页</a></li>
-            <li nz-menu-divider></li>
-            <li nz-menu-item><a>退出</a></li>
-          </ul>
-          </nz-dropdown>
-        </span>
+  <div style="margin: 4px auto;width: 896px;background-color: white;float: right">
+    <div>
+      <div style="display: inline-block;font-size: 20px;color: #6d757a;padding-left: 32px;padding-top: 8px" nz-row>
+        <span>随笔</span>
       </div>
-    </nz-header>
-    <!--内容区域-->
-    <nz-content style="margin:0 16px;">
-      <!--内容标题-->
-      <nz-breadcrumb style="margin:16px 0;">
-        <nz-breadcrumb-item>内容标题</nz-breadcrumb-item>
-      </nz-breadcrumb>
-      <!--内容正文-->
-      <div style="padding:24px; background: #fff; min-height: 700px;">
-        <!--<router-outlet></router-outlet>-->
+      <div style="padding-top: 4px;" nz-row>
+        <div nz-col [nzSpan]="2" [nzOffset]="14"><button nz-button >新建</button></div>
+        <div nz-col [nzSpan]="2"><button nz-button >新建</button></div>
+        <div nz-col [nzSpan]="6" style="padding-right: 8px">
+          <nz-input-group nzSuffixIcon="anticon anticon-search">
+            <input type="text" nz-input placeholder="input search text">
+          </nz-input-group>
+        </div>
       </div>
-    </nz-content>
-    <nz-footer style="text-align: center;">Ant Design ©2017 Implement By Angular</nz-footer>
-  </nz-layout>
-</nz-layout>
-<ng-template #trigger>
-  <i class="anticon anticon-up"></i>
-</ng-template>
+    </div>
+
+    <div style="margin: 24px;clear: both">
+      <div style="border-bottom:1px dotted #ddd;padding: 8px;" *ngFor="let item of data">
+        <div>
+          <a style="font-size: 18px;color: #4f4f4f;word-wrap: break-word;word-break: break-all;"
+             [routerLink]="['/post/postdetail',item.id]">{{item.title}}</a>
+        </div>
+        <div nz-row style="text-align: center">
+          <div nz-col [nzSpan]="6" style="text-align: left"><i class="anticon anticon-form"></i> {{item.time}}</div>
+          <div nz-col [nzSpan]="3" style="text-align: left"><i class="anticon anticon-eye"></i> {{item.id}}</div>
+          <div nz-col [nzSpan]="9"></div>
+          <div nz-col [nzSpan]="2">查看</div>
+          <div nz-col [nzSpan]="2">禁止评论</div>
+          <div nz-col [nzSpan]="2">删除</div>
+        </div>
+      </div>
+
+      <div style="text-align: center;padding: 8px">
+        <nz-pagination [nzPageIndex]="1" [nzTotal]="50" ></nz-pagination>
+      </div>
+    </div>
+
+  </div>
+
+</div>

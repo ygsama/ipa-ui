@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'plan',
-    loadChildren: './layout/plan/plan.module#IpaModule'
+    loadChildren: './layout/plan/plan.module#PlanModule'
   },
   {
     path: 'home',
